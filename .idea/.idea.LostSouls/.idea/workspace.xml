@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b44f754-849c-4c54-ba45-c4dc40e8fd2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/test.png.meta" afterDir="false" />
+    <list default="true" id="9b44f754-849c-4c54-ba45-c4dc40e8fd2c" name="Default Changelist" comment="starting work">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LostSouls/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LostSouls/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/item.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +17,9 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/character.cs" />
+      <option value="$PROJECT_DIR$/Assets/item.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nfnv0N3WBJPFdPZVlvZDYW8Ohh" />
@@ -64,8 +66,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611790248400</updated>
-      <workItem from="1611790287579" duration="2112000" />
+      <workItem from="1611790287579" duration="2717000" />
     </task>
+    <task id="LOCAL-00001" summary="starting work">
+      <created>1611792772897</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611792772898</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,5 +97,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="starting work" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting work" />
   </component>
 </project>
