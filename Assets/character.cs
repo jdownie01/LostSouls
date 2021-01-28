@@ -11,26 +11,52 @@ public class character : MonoBehaviour
     Vector3 pos;                                // For movement
     float speed = 5.0f;                         // Speed of movement
      
-    void Start () {
-        pos = transform.position;          // Take the initial position
-        
+    //Movement
+    public float jump;
+    float moveVelocity;
+
+    //Grounded Vars
+    bool isGrounded = true;
+    private Rigidbody2D _rigidbody2D;
+
+    private void Start()
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D> ();
     }
- 
-    void FixedUpdate () {
-        if(Input.GetKey(KeyCode.A) && transform.position == pos) {        // Left
-            pos += Vector3.left;
+
+    void Update () 
+    {
+        //Jumping
+        if (Input.GetKey (KeyCode.Space) || Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.Z) || Input.GetKey (KeyCode.W)) 
+        {   
+            if(isGrounded)
+            {
+                _rigidbody2D.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+                isGrounded = false;
+            }
         }
-        if(Input.GetKey(KeyCode.D) && transform.position == pos) {        // Right
-            pos += Vector3.right;
+
+        moveVelocity = 0;
+
+        //Left Right Movement
+        if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) 
+        {
+            moveVelocity = -speed;
         }
-        if(Input.GetKey(KeyCode.W) && transform.position == pos) {        // Up
-            pos += Vector3.up;
+        if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) 
+        {
+            moveVelocity = speed;
         }
-        if(Input.GetKey(KeyCode.S) && transform.position == pos) {        // Down
-            pos += Vector3.down;
-        }
-        transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);    // Move there
+
+        _rigidbody2D.velocity = new Vector2 (moveVelocity, _rigidbody2D.velocity.y);
+
     }
+    //Check if Grounded
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        isGrounded = true;
+    }
+    
 
     public item getEquipped(int slot)
     {
